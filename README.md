@@ -10,7 +10,7 @@ Docker image for building CoolQ-Golang-Plugins
 docker run --name build-gocqplg -v /your/plugin/abs_dir:/home tnze/coolq-golang-builder
 ```
 
-其中`/your/plugin/abs_dir`替换为你插件项目目录。  
+其中`/your/plugin/abs_dir`替换为你插件项目目录的**绝对路径**。  
 之后每次重新编译插件只需执行如下指令即可：
 
 ```bash
