@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV CGO_LDFLAGS=-Wl,--kill-at \
     CGO_ENABLED=1 \
     GOOS=windows \
-    GOARCH=386
-
+    GOARCH=386 \
+    GOPROXY=https://goproxy.cn
+    
 WORKDIR /home
 CMD /usr/local/go/bin/go build -ldflags "-s -w" -buildmode=c-shared -o app.dll
